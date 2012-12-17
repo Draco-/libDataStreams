@@ -1,6 +1,22 @@
+﻿# coding=utf-8
 """
-DS_basic.py
+ Copyright (C) 2012 Jürgen Baumeister
 
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+DS_basic.py
+#=====================================================================================================
 A basic class to model various data sources.
 A data source in this project is defined as an object, that is able to contact a file,
 database, input facility and so on and to provide data as a series of records.

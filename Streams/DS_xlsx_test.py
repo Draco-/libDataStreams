@@ -1,6 +1,22 @@
+# coding=utf-8
 """
-DS_basic_test.py
+ Copyright (C) 2012 Jürgen Baumeister
 
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+DS_basic_test.py
+#=====================================================================================================
 Test suite for the DS_basic class
 """
 
@@ -96,7 +112,7 @@ class TestOpenDS_xlsx(unittest.TestCase):
 class TestCloseDS_xlsx(unittest.TestCase):
     def setUp(self):
         print 'Close the DS_xlsx object'
-        self.wd = 'c:/Dokumente und Einstellungen/BaumeiJu01/Eigene Dateien/Geschäft/080 Organisation/Privat/Python/'
+        self.wd = '../Testdata/'
         self.xlsx = 'DS_xlsx_testdata.xlsm'
         self.tab = 'Table'
 
@@ -125,7 +141,7 @@ class TestCloseDS_xlsx(unittest.TestCase):
 class TestNextDS_xlsx(unittest.TestCase):
     def setUp(self):
         print 'Get next record from DS_xlsx'
-        self.wd = 'c:/Dokumente und Einstellungen/BaumeiJu01/Eigene Dateien/Geschäft/080 Organisation/Privat/Python/'
+        self.wd = '../Testdata/'
         self.xlsx = 'DS_xlsx_testdata.xlsm'
         self.tab = 'Table'
 
@@ -160,7 +176,7 @@ class TestNextDS_xlsx(unittest.TestCase):
 class TestRowLimitDS_xlsx(unittest.TestCase):
     def setUp(self):
         print 'Test row limiting of DS_xlsx'
-        self.wd = 'c:/Dokumente und Einstellungen/BaumeiJu01/Eigene Dateien/Geschäft/080 Organisation/Privat/Python/'
+        self.wd = '../Testdata/'
         self.xlsx = 'DS_xlsx_testdata.xlsm'
         self.tab = 'Table'
 
@@ -196,7 +212,7 @@ class TestRowLimitDS_xlsx(unittest.TestCase):
 class TestResetDS_xlsx(unittest.TestCase):
     def setUp(self):
         print 'Test the reset method of DS_xlsx'
-        self.wd = 'c:/Dokumente und Einstellungen/BaumeiJu01/Eigene Dateien/Geschäft/080 Organisation/Privat/Python/'
+        self.wd = '../Testdata/'
         self.xlsx = 'DS_xlsx_testdata.xlsm'
         self.tab = 'Table'
 
@@ -236,7 +252,7 @@ class TestResetDS_xlsx(unittest.TestCase):
 class TestRecordDS_xlsx(unittest.TestCase):
     def setUp(self):
         print 'Test record returned by DS_xlsx'
-        self.wd = 'c:/Dokumente und Einstellungen/BaumeiJu01/Eigene Dateien/Geschäft/080 Organisation/Privat/Python/'
+        self.wd = '../Testdata/'
         self.xlsx = 'DS_xlsx_testdata.xlsm'
         self.tab = 'Table'
 
@@ -256,7 +272,7 @@ class TestRecordDS_xlsx(unittest.TestCase):
         rec = self.ds.next()
         assert isinstance(rec, dict), 'Returned record is not a dictionary'
         #print len(rec)
-        assert len(rec) == 21, 'Record not returned correctly'
+        assert len(rec) == 22, 'Record not returned correctly'
         try:
             field = rec['F']
         except:
